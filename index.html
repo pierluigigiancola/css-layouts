@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts</title>
+    <link rel="stylesheet" href="box.css">
+</head>
+
+
+
+<body>
+    <section>
+        <h3>
+            Flexbox
+        </h3>
+        <p>Flexbox by default place all it's children on the same row, each children decided its width</p>
+        <div class="box" style="display: flex;">
+            <div class="box">
+                <div class="box" style="width: 50px;">50px</div>
+            </div>
+            <div class="box">
+                <div class="box" style="width: 100px;">100px</div>
+            </div>
+            <div class="box">
+                <div class="box" style="width: 200px;">200px</div>
+            </div>
+            <div class="box">
+                <span class="box">inline block free text</span>
+            </div>
+        </div>
+
+        <p>We can set a child "width" with the flex shorthand property</p>
+        <div class="box" style="display: flex; ">
+            <div class="box" style="flex: 1;">
+                <div class="box" style="width: 50px;">50px</div>
+            </div>
+            <div class="box" style="flex: 1;">
+                <div class="box" style="width: 100px;">100px</div>
+            </div>
+            <div class="box" style="flex: 1;">
+                <div class="box" style="width: 200px;">200px</div>
+            </div>
+            <div class="box" style="flex: 1">
+                <span class="box">inline block free text</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3> Grid</h3>
+        <p>Grid by default doesn't do much, based on properties we can control the width (and the height) of the
+            childrens</p>
+
+        <p>grid can mimic the same behavious of a Flex container by using grid-auto-flow `column` (by default its `row`)
+        </p>
+        <div class="box" style="display: grid; grid-auto-flow: column;">
+            <div class="box">
+                <div class="box" style="width: 50px;">50px</div>
+            </div>
+            <div class="box">
+                <div class="box" style="width: 100px;">100px</div>
+            </div>
+            <div class="box">
+                <div class="box" style="width: 200px;">200px</div>
+            </div>
+            <div class="box">
+                <span class="box">inline block free text</span>
+            </div>
+        </div>
+</body>
+
+</html>

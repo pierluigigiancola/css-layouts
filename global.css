@@ -1,0 +1,103 @@
+:root {
+    --color-1: hsl(181, 69%, 61%);
+    --color-2: hsl(206, 46%, 37%);
+    --color-3: hsl(203, 30%, 26%);
+    --color-4: hsl(39, 92%, 57%);
+    --color-5: hsl(21, 89%, 52%);
+
+    --border-color: hsl(125, 100%, 60%);
+
+    --seed-space: 0.25rem;
+
+    --space-1: var(--seed-space);
+    --space-2: calc(var(--space-1) * 2);
+    --space-3: calc(var(--space-2) * 2);
+    --space-4: calc(var(--space-3) * 2);
+    --space-5: calc(var(--space-4) * 2);
+    --space-6: calc(var(--space-5) * 2);
+
+    --border-radius: var(--space-1);
+
+
+    --text-color-light: hsl(0, 0%, 95%);
+    --text-color-dark: hsl(200, 15%, 8%);
+}
+
+::backdrop {
+    background-color: hsl(0, 0%, 0%, 0.15);
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+.code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: hsla(61, 100%, 50%, 0.544);
+    border-radius: var(--border-radius);
+    padding: 0 var(--space-1);
+}
+
+.lv-1 {
+    background-color: var(--color-1);
+    color: var(--text-color-dark)
+}
+
+.lv-2 {
+    background-color: var(--color-2);
+    color: var(--text-color-light)
+}
+
+.lv-3 {
+    background-color: var(--color-3);
+    color: var(--text-color-light)
+}
+
+.lv-4 {
+    background-color: var(--color-4);
+    color: var(--text-color-dark)
+}
+
+.lv-5 {
+    background-color: var(--color-5);
+    color: var(--text-color-dark)
+}
+
+.next {
+    position: fixed;
+    display: inline-block;
+    padding: var(--space-2);
+    border-radius: var(--border-radius);
+    bottom: var(--space-4);
+    right: var(--space-4);
+}
+
+.overflowing-box {
+    display: block;
+    height: 200vh;
+}
+
+.prev {
+    position: fixed;
+    display: inline-block;
+    padding: var(--space-2);
+    border-radius: var(--border-radius);
+    bottom: var(--space-4);
+    left: var(--space-4);
+}
+
+.box {
+    border: var(--space-2) solid var(--border-color);
+    padding: var(--space-2);
+    outline: 1px solid var(--text-color-dark);
+}
+
+.grid {
+    display: grid;
+    gap: var(--space-2);
+}

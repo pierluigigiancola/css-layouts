@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+
+<body class="lv-1">
+    <h1>Modal Example</h1>
+    <p>using the previous layout but on a modal.</p>
+    <button onclick="dialog.showModal()">Open Modal</button>
+
+    <dialog id="dialog">
+        <div class="grid lv-1"
+            style="min-height: 40vh; max-height: 60vh; grid-template-rows: min-content 1fr min-content;">
+            <header class="box lv-2">
+                <h2>Modal Header</h2>
+            </header>
+            <main class="box lv-2" style="overflow: auto;">
+                Modal Content
+
+                <p>There's another row at the bottom but the trick is the same, set the height on the container and
+                    define the rows using a grid</p>
+                <div class="lv-3 overflowing-box">still here to overflow</div>
+            </main>
+            <footer class="box lv-2" style="text-align: right;">
+                Modal Footer
+                <button onclick="dialog.close()">Close</button>
+            </footer>
+        </div>
+    </dialog>
+    <script>
+        var dialog = document.getElementById('dialog');
+    </script>
+
+    <a href="app-layout.html" class="prev lv-3">Prev</a>
+    <a href="modal.html" class="next lv-3">Next</a>
+</body>
+
+</html>
